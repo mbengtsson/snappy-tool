@@ -12,7 +12,7 @@ object snappy extends App {
   }
 
   def doSnappy(f: (String, String, Int) => Unit)(args: List[String]): Unit = args match {
-    case in :: out :: bs :: ys if bs forall Character.isDigit => (in, out, bs.toInt)
+    case in :: out :: bs :: ys if bs forall Character.isDigit => f(in, out, bs.toInt)
     case in :: out :: ys => f(in, out, 1024)
     case _ => printUsage()
   }
