@@ -20,7 +20,7 @@ object snappy extends App {
     case _ => printUsage()
   }
 
-  def printUsage(): Unit = println("Usage: snappy [c|x] in-file out-file <buffer_size>")
+  def printUsage(): Unit = println("Usage: snappy (c|x) <in-file> <out-file> [<buffer-size>]")
 
   def compress(in: String, out: String, bufferSize: Int): Unit = streamCopy(
     new FileInputStream(in),
