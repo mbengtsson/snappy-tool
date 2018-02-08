@@ -1,10 +1,7 @@
 package se.marcusbengtsson
 
 import java.io.{FileInputStream, FileOutputStream, InputStream, OutputStream}
-
 import org.xerial.snappy.{SnappyFramedInputStream, SnappyFramedOutputStream}
-
-case class Args(option: String, output: String, input: List[String])
 
 object snappy extends App {
 
